@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <title>AnimationButton</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    body{
+        width: 100vw;
+        height: 100vh;
+        font-family: 'poppins',sans-serif;
+        background-image:linear-gradient(to right bottom,#051937,#004d7a);
+        background-size: 400% 400%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .btn{
+        width: 200px;
+        padding: 15px;
+        border-radius: 5px;
+        border: 1px solid #c4e538;
+        background: transparent;
+        color: #c4e538;
+        font-weight: 600;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .layer{
+        background-color: #c4e538;
+        height: 103%;
+        width: 0%;
+        position: absolute;
+        left: 0;
+        border-radius: 5px;
+        bottom: 0;
+        z-index: -1;
+        transition: 0.5s;
+        
+    }
+
+    .btn:hover .layer{
+        width: 100%;
+    }
+    .btn:hover{
+        border: none;
+        color: #004d7a;
+    }
+</style>
+<body>
+    <a href="EmailLoginpage.html" target="f9" >
+    <button class="btn">
+        <span  class="layer"></span>
+        Log in
+    </button></a>
+    <button class="btn">
+        <span  class="layer"></span>
+        Click me
+    </button>
+</body>
+</html> 

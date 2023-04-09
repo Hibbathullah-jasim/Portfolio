@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<style>
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+}
+
+h3{
+        margin-bottom: 10px;
+        font-weight: normal;
+        font-style: italic;
+        color: white;
+}
+
+
+.loader{
+    height: 300px;
+    width: 300px;
+    background: rgb(32,36,0);
+    background: linear-gradient(90deg, rgba(32,36,0,1) 0%, rgba(25,121,9,1) 44%, rgba(0,212,255,1) 76%);
+    border-radius: 50%;
+    box-shadow: rgb(33, 51, 60) 0px 10px 30px -10px;
+    position: relative;
+    animation: spin 2s linear infinite;
+}
+.loader::before{
+    position:absolute;
+    content: "";
+    height: 90%;
+    width: 90%;
+    background-color: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: black;
+}
+
+@keyframes spin {
+    to{
+        transform: rotate(360deg);
+    }
+    
+}
+</style>
+<body>
+    <h3>Animated Gradient Color Spinner</h3>
+    <div class="loader"></div>
+</body>
+</html>
+<!--
+    loader::before mean(2nd layer of loader which means loader circle front of property)
+-->

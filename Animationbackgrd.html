@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation-Background</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<style>
+    *{
+       padding: 0;
+       margin: 0; 
+
+    }
+    body{
+        width: 100vw;
+        height: 100vh;
+        font-family: 'Poppins', sans-serif;
+        background-image: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+        background-size: 400% 400%;
+        animation: animatebg 2s ease infinite;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+   }
+   @keyframes animatebg {
+
+    0%{background-position: 0%;
+    }
+    50%{background-position: 50%;}
+
+    100%{background-position: 100%;
+    }   
+   }
+   .card{
+       width: 650px;
+       height: 300px;
+       background: white;
+       box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+       border-radius: 5px;
+       font-size:35px ;
+       font-weight: 700;
+       text-align: center;
+       line-height: 300px;
+       color: teal;
+  }
+</style>
+<body>
+    <div class="card">
+        Application
+   </div>
+</body>
+</html>
+
+<!--
+ vw means(viewport width)
+ vh means(viewport height)
+ back img from chrome
+ background size 400(zoom and it will convert slice a page)first zoom the page and then moving the color object
+ animation(animatebg) this name given in keyframes content that so connect a animation(ease means given sec calculate(infinite means looping method))
+ box shadow from chrome
+ display flex means(convert into a box)
+ justify content means(In same line box will move(whether it is given property:right,left,center))
+ align-item means(in center of justify content:center(it will directly dropdown the box center of the page))only center property obtained no other property
+
+
+    
+    
+
+-->
